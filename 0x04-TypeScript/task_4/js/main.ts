@@ -14,7 +14,7 @@ export const cTeacher: Subjects.Teacher = {
   experienceTeachingC: 10
 };
 
-console.log('C++');
+console.log('Cpp');
 cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
