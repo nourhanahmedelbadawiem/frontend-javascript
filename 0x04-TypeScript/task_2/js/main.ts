@@ -49,27 +49,3 @@ function createEmployee(salary: number | string): Director | Teacher {
   }
   return new Director();
 }
-
-// isDirector type predicate
-function isDirector(employee: Director | Teacher): employee is Director {
-  return employee instanceof Director;
-}
-
-// executeWork function
-function executeWork(employee: Director | Teacher): string {
-  if (isDirector(employee)) {
-    return employee.workDirectorTasks();
-  }
-  return employee.workTeacherTasks();
-}
-
-// Subjects string literal type
-type Subjects = 'Math' | 'History';
-
-// teachClass function
-function teachClass(todayClass: Subjects): string {
-  if (todayClass === 'Math') {
-    return 'Teaching Math';
-  }
-  return 'Teaching History';
-}
