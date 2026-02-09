@@ -13,15 +13,15 @@ interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-// printTeacher function
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName} ${lastName}`;
-}
-
 // printTeacherFunction interface
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+
+// printTeacher function
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+  return `${firstName} ${lastName}`;
+};
 
 // StudentClassConstructor interface
 interface StudentClassConstructor {
